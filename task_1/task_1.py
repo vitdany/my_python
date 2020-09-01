@@ -45,11 +45,14 @@ def print_max_number(vec_a):
 def print_time(sec):
     h = sec // 3600
     m = (sec - h * 3600) // 60
-    s = sec - h * 3600 - m * 60
-    hh = str(h).zfill(2)
-    mm = str(m).zfill(2)
-    ss = str(s).zfill(2)
-    print('format time: {:s}:{:s}:{:s}'.format(hh, mm, ss))
+    #s = sec - h * 3600 - m * 60
+    #hh = str(h).zfill(2)
+    #mm = str(m).zfill(2)
+    #ss = str(s).zfill(2)
+    #print('format time: {:s}:{:s}:{:s}'.format(hh, mm, ss))
+    s = sec % 60
+    print(f"{h:02}:{m:02}:{s:02}")
+
     # print('format time: %s:%s:%s' % (hh, mm, ss))
     # oct1, oct2, oct3 = [hh, mm, ss]
     # print(f'''format time: {oct1:<1}:{oct2:<1}:{oct3:<1} ''')
@@ -68,10 +71,10 @@ def print_hi(name):
 
 if __name__ == '__main__':
 
-    who = input("\nwhat is your name?")
+    who = input("\nwhat is your name? ")
     print_hi(who)
 
-    time = int(input("\nwhat time is it?"))
+    time = int(input("\nwhat time is it? "))
     print_time(time)
 
     n = input("\nenter N:")
