@@ -41,14 +41,14 @@ def task_4():
     def my_sqrt_use_for(a, n):
         if n < 0:
             m = 0
-            for i in range(1, -n):
+            for _ in range(-n):
                 m += a * a
             return 1 / m
 
     print('\ntask 4')
-    print('args = 2, -2')
-    print(f'sqrt = {my_sqrt(2, -2)}')
-    print(f'sqrt use for = {my_sqrt_use_for(2, -2)}')
+    print('args = 2, -4')
+    print(f'sqrt = {my_sqrt(2, -4)}')
+    print(f'sqrt use for = {my_sqrt_use_for(2, -4)}')
 
 
 def task_5():
@@ -84,9 +84,9 @@ def task_6():
 
 
 if __name__ == '__main__':
-    task_1()
-    task_2()
-    task_3()
+    #task_1()
+    #task_2()
+    #task_3()
     task_4()
-    task_5()
-    task_6()
+    #task_5()
+    #task_6()
